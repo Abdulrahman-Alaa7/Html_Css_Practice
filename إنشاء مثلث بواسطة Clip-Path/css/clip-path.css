@@ -1,0 +1,150 @@
+/* start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* small screan */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium screan  */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large screan  */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End global rules */
+/* start  */
+.parent {
+    background-color: #eee;
+    padding: 10px;
+    margin: 50px auto;
+    width: 220px;
+    height: 220px;
+    position: relative;
+}
+
+.parent::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: red green blue black;
+}
+
+.parent span {
+    position: absolute;
+}
+
+.parent .x-ax {
+    top: -35px;
+}
+
+.parent .x-ax::before {
+    content: "";
+    width: 80px;
+    background-color: #009688;
+    height: 2px;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.parent .x-ax::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #009688;
+    position: absolute;
+    left: 130px;
+    top: 50%;
+    transform: translateY(-50%);
+    clip-path: polygon(0 0, 50% 50%, 0 100%);
+}
+
+.parent .y-ax {
+    left: -35px;
+    writing-mode: vertical-lr;
+}
+
+.parent .y-ax::before {
+    content: "";
+    width: 2px;
+    background-color: #009688;
+    height: 80px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.parent .y-ax::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #009688;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: polygon(100% 0%, 50% 50%, 0% 0%);
+}
+
+.parent .c1 {
+    width: 200px;
+    height: 200px;
+    background-color: #009688;
+    clip-path: circle(60px at 50% 50%);
+}
+
+.parent .tmain {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.parent .t1 {
+    background-color: aquamarine;
+    clip-path: polygon(100% 100%, 0% 100%, 50% 0%);
+}
+
+.parent .t2 {
+    background-color: orangered;
+    clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
+}
+
+.parent .t3 {
+    background-color: rgb(10, 112, 230);
+    clip-path: polygon(100% 0%, 50% 50%, 0% 0%);
+}
+
+.parent .t4 {
+    background-color: burlywood;
+    clip-path: polygon(50% 100%, 0% 50%, 100% 50%);
+}
+
+/* end  */

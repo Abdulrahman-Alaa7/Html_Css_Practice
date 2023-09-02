@@ -1,0 +1,77 @@
+/* start global rules */
+:root {
+    --main-color: rgb(255 255 255 / 80%);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* small screan */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium screan  */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large screan  */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End global rules */
+/* start */
+
+p {
+    color: var(--main-color);
+    font-size: 30px;
+    width: 460px;
+    /* You Can Use 28ch */
+    margin: 30px auto;
+    border-right: 2px solid var(--main-color);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: control-width 3s steps(23) 2s both, blink 0.5s infinite;
+}
+
+@keyframes control-width {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 460px;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right-color: var(--main-color);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/* End */

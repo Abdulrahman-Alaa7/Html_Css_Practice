@@ -1,0 +1,45 @@
+/* start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* End global rules */
+/* start */
+.fill {
+    margin: 20px auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px #333;
+    width: fit-content;
+    position: relative;
+    cursor: pointer;
+}
+
+.fill::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-text-fill-color: coral;
+    transition: 0.5s;
+    width: 0;
+    overflow: hidden;
+}
+
+.fill:hover::before {
+    width: 100%;
+}
+
+/* End */

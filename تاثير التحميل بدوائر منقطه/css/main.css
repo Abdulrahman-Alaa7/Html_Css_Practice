@@ -1,0 +1,91 @@
+/* start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* small screan */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium screan  */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large screan  */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End global rules */
+/* start */
+.dotte {
+    width: 100px;
+    height: 100px;
+    border-style: solid solid dotted dotted;
+    border-radius: 50%;
+    border-color: black;
+    border-width: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    animation: rotate-right 2s linear infinite;
+}
+
+.dotte::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-style: dotted dotted solid solid;
+    border-color: rgb(151, 39, 39);
+    border-radius: 50%;
+    border-width: 4px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: rotate-left 1s linear infinite;
+}
+
+/* End */
+
+@keyframes rotate-right {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-left {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
